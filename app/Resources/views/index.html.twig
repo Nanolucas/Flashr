@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+	<article class="box post">
+		<header>
+			<h2>So you want to learn a new language? <br />Well you've chosen terribly by coming here.</h2>
+		</header>
+		<h3>Here are some random phrases available in your chosen New Language:</h3>
+		<p>
+			<a href="/{{ current_language }}/phrase/{{ phrase_data.translation_seo }}">{{ phrase_data.translation|capitalize }}</a>
+			<a href="/{{ current_language }}/phrase/{{ phrase2_data.translation_seo }}" style="margin-left: 100px;">{{ phrase2_data.translation|capitalize }}</a>
+			<a href="/{{ current_language }}/phrase/{{ phrase3_data.translation_seo }}" style="margin-left: 100px;">{{ phrase3_data.translation|capitalize }}</a>
+			<a href="/{{ current_language }}/phrase/{{ phrase4_data.translation_seo }}" style="margin-left: 100px;">{{ phrase4_data.translation|capitalize }}</a>
+			<a href="/{{ current_language }}/phrase/{{ phrase5_data.translation_seo }}" style="margin-left: 100px;">{{ phrase5_data.translation|capitalize }}</a>
+		</p>
+	</article>
+{% endblock %}

@@ -1,0 +1,18 @@
+<h3 id="question_language">In {{ question.from_language_name|capitalize }}:</h3>
+<h1 id="question_phrase">{{ question.phrase }}</h1><br>
+<h3>In {{ question.to_language_name|capitalize }}:</h3>
+<input type="hidden" id="question_id" value="{{ question.id }}" />
+<div class="answer_container">
+	<div>
+		<input type="button" class="left" value="{{ answers.0.word }}" data-value="{{ answers.0.id }}" /> 
+		<input type="button" class="right" value="{{ answers.1.word }}" data-value="{{ answers.1.id }}" /> 
+	</div>
+	<div>
+		<input type="button" class="left" value="{{ answers.2.word }}" data-value="{{ answers.2.id }}" /> 
+		<input type="button" class="right" value="{{ answers.3.word }}" data-value="{{ answers.3.id }}" /> 
+	</div>
+</div>
+<div id="answer_extra" style="margin-top: 40px; display: none;">
+	<h3>Phonetic:</h3>
+	<h1></h1>
+</div>

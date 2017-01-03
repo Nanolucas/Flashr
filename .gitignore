@@ -1,0 +1,15 @@
+/app/bootstrap.php.cache
+/app/cache/*
+!app/cache/.gitkeep
+/app/config/parameters.yml
+/app/config/parameters_dev.yml
+/app/config/parameters_prod.yml
+/app/logs/*
+!app/logs/.gitkeep
+/app/phpunit.xml
+/bin/
+/composer.phar
+/src/AppBundle/Config/levels.yml
+/vendor/
+/web/bundles/
+HOW_TO_RUN_DEV_SERVER.txt

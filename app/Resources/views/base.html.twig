@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+        <title>{{ page_title }}</title>
+		<!--[if lte IE 8]><script src="{{ asset('css/ie/html5shiv.js') }}"></script><![endif]-->
+		<script src="{{ asset('js/jquery.min.js') }}"></script>
+		<script src="{{ asset('js/jquery.dropotron.min.js') }}"></script>
+		<script src="{{ asset('js/skel.min.js') }}"></script>
+		<script src="{{ asset('js/skel-layers.min.js') }}"></script>
+		<script src="{{ asset('js/init.js') }}"></script>
+		<link rel="stylesheet" href="{{ asset('css/skel.css') }}" />
+		<link rel="stylesheet" href="{{ asset('css/style.css?id=2') }}" />
+		<link rel="stylesheet" href="{{ asset('css/style-desktop.css') }}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ asset('css/ie/v8.css') }}" /><![endif]-->
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="no-sidebar">
+        {% block body %}
+			<!-- Header -->
+			<div id="header-wrapper">
+				<div id="header" class="container">
+					<h1 id="logo">Flashr</h1>
+					<p>Learn to language better</p>
+				</div>
+				
+				<nav id="nav">
+					<ul>
+						<li><a class="icon fa-home" href="/"><span>Home</span></a></li>
+						<li><a class="icon fa-bar-chart-o" href="/{{ current_language }}/test/"><span>Test Yoself</span></a></li>
+						<li>
+							<a href="" class="icon fa-cog"><span>New Language</span></a>
+							<ul>
+								<li><a href="/ru/set/">Russian</a></li>
+								<li><a href="/de/set/">German</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+			<!-- Main -->
+			<div id="main-wrapper">
+				<div id="main" class="container">
+					<div id="content">
+						{% block content %}{% endblock %}
+					</div>
+				</div>
+			</div>
+			
+			<!-- Footer -->
+			<div>
+				<div id="copyright" class="container">
+					<ul class="links">
+						<li>&copy; 2015 Flashr. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</div>
+		{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

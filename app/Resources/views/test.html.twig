@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<script src="{{ asset('js/test.js') }}"></script>
+<script type="text/javascript">
+	var CURRENT_LANGUAGE = '{{ current_language }}',
+		category = '{{ category }}';
+</script>
+{% endblock %}
+
+{% block content %}
+	<div class="test_container">
+		{% include 'test_container.html.twig' %}
+	</div>
+{% endblock %}
